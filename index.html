@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplementos PRO - Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">Suplementos PRO</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="banner" class="banner">
+            <div class="banner-content">
+                <h1>Alcance Seus Objetivos</h1>
+                <p>Encontre os melhores suplementos para sua saúde e performance.</p>
+                <a href="#produtos" class="cta-button">Ver Produtos</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section">
+            <h2>Nossos Produtos</h2>
+            <div class="products-grid">
+                <div class="product-card" data-id="1" data-name="Whey Protein Isolado" data-price="120.00">
+                    <img src="https://via.placeholder.com/300x300.png?text=Whey+Protein" alt="Whey Protein Isolado">
+                    <h3>Whey Protein Isolado</h3>
+                    <p>Proteína de alta qualidade para recuperação muscular.</p>
+                    <span class="price">R$ 120,00</span>
+                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Creatina Monohidratada" data-price="60.00">
+                    <img src="https://via.placeholder.com/300x300.png?text=Creatina" alt="Creatina Monohidratada">
+                    <h3>Creatina Monohidratada</h3>
+                    <p>Aumenta a força e o desempenho em treinos.</p>
+                    <span class="price">R$ 60,00</span>
+                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Pré-treino X" data-price="95.00">
+                    <img src="https://via.placeholder.com/300x300.png?text=Pre-Treino" alt="Pré-treino X">
+                    <h3>Pré-treino X</h3>
+                    <p>Mais foco e energia para seus treinos.</p>
+                    <span class="price">R$ 95,00</span>
+                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="4" data-name="Multivitamínico Essencial" data-price="75.00">
+                    <img src="https://via.placeholder.com/300x300.png?text=Multivitaminico" alt="Multivitamínico Essencial">
+                    <h3>Multivitamínico Essencial</h3>
+                    <p>Apoio à saúde geral e bem-estar.</p>
+                    <span class="price">R$ 75,00</span>
+                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Seu Carrinho</h2>
+                <div id="cart-items">
+                    </div>
+                <div class="cart-total-container">
+                    <span>Total:</span>
+                    <span id="cart-total">R$ 0,00</span>
+                </div>
+                <button id="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Nossa Empresa</h4>
+                <p>Suplementos PRO é a sua loja online de suplementos. Qualidade e resultados garantidos.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@suplementospro.com</p>
+                <p>Telefone: (11) 99999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Suplementos PRO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
