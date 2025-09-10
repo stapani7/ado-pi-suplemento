@@ -48,6 +48,7 @@ body {
     text-decoration: none;
 }
 
+
 .nav-list {
     list-style: none;
     display: flex;
@@ -59,13 +60,13 @@ body {
 
 .nav-list a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-list a:hover {
-    color: var(--primary-color);
+    color: #0044ff;
 }
 
 .cart-icon-container {
