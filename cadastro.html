@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="style.login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Cadastro</h1>
+    <form action="menu.html" method="post">
+      
+        <!-- Dados pessoais -->
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required />
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" required />
+
+      <label for="dataNasc">Data de Nascimento</label>
+      <input type="date" id="dataNasc" name="dataNasc" required />
+
+      <!-- Endereço -->
+      <h3>Endereço</h3>
+      <label for="cep">CEP</label>
+      <input type="text" id="cep" name="cep" required />
+
+      <label for="rua">Rua</label>
+      <input type="text" id="rua" name="rua" required />
+
+      <label for="numero">Número</label>
+      <input type="text" id="numero" name="numero" required />
+
+      <label for="complemento">Complemento</label>
+      <input type="text" id="complemento" name="complemento" />
+
+      <label for="bairro">Bairro</label>
+      <input type="text" id="bairro" name="bairro" required />
+
+      <label for="cidade">Cidade</label>
+      <input type="text" id="cidade" name="cidade" required />
+
+      <label for="estado">Estado</label>
+      <input type="text" id="estado" name="estado" required />
+
+      <!-- Senha -->
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <label for="confSenha">Confirmar Senha</label>
+      <input type="password" id="confSenha" name="confSenha" required />
+
+      <!-- Botões -->
+      <div class="buttons">
+        <input type="submit" value="Cadastrar" />
+        <input type="reset" value="Limpar" />
+      </div>
+    </form>
+
+    <div class="login-msg">
+      Já tem conta? <a href="login.html">Entrar</a>
+    </div>
+          <p><a href="index.html">Inicio</a></p>
+  </div>
+</body>
+</html>
