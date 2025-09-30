@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardWork - Área Administrativa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+
+        :root {
+            --primary-blue: rgba(0, 123, 255, 0.7);
+            --primary-blue-hover: rgba(0, 105, 210, 0.9);
+            --background-light: #f4f4f4;
+            --box-background: rgba(255, 255, 255, 0.95);
+            --shadow: 0 8px 24px rgba(0,0,0,0.2);
+            --text-dark: #333;
+            --text-medium: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light); 
+        }
+        
+        .admin-header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .admin-header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .admin-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--box-background);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+        }
+        
+        /*Voltar*/
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 15px;
+            background-color: var(--primary-blue); 
+            color: white;
+            text-decoration: none;
+            font-weight: 700; 
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: var(--primary-blue-hover);
+        }
+        .back-link i {
+            margin-right: 8px;
+        }
+
+        /* Títulos */
+        h2 {
+            margin-bottom: 24px;
+            color: var(--primary-blue); 
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 5px;
+        }
+
+        /*** Formulário de Cadastro ***/
+        .form-cadastro {
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+        }
+        .form-cadastro label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+        .form-cadastro input[type="text"], 
+        .form-cadastro input[type="number"], 
+        .form-cadastro textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-cadastro input:focus, .edit-input:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+        }
+        .form-cadastro button[type="submit"] {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        .form-cadastro button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Tabela de Produtos */
+        .tabela-produtos {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .tabela-produtos th, .tabela-produtos td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .tabela-produtos th {
+            background-color: #555; 
+            color: white;
+            text-transform: uppercase;
+        }
+        .tabela-produtos tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Campos de edição na tabela */
+        .edit-input {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        /* Botões de Ação (Salvar/Excluir) */
+        .action-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            margin-right: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .action-btn.save:hover {
+            background-color: var(--primary-blue-hover);
+        }
+        .action-btn.delete {
+            background-color: #dc3545; 
+        }
+        .action-btn.delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="admin-header">
+        <h1><i class="fas fa-user-cog"></i> Painel de Administração HardWork</h1>
+    </header>
+
+    <div class="admin-container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar para a Loja</a>
+
+        <section>
+            <h2>Cadastrar Novo Produto</h2>
+            <form class="form-cadastro">
+                <label for="nome-produto">Nome do Produto:</label>
+                <input type="text" id="nome-produto" name="nome-produto" required>
+                
+                <label for="preco-produto">Preço (R$):</label>
+                <input type="number" id="preco-produto" name="preco-produto" step="0.01" min="0" required>
+                
+                <label for="descricao-produto">Descrição:</label>
+                <textarea id="descricao-produto" name="descricao-produto" rows="3" required></textarea>
+                
+                <label for="url-imagem">URL da Imagem:</label>
+                <input type="text" id="url-imagem" name="url-imagem" placeholder="ex: img/novo-produto.png" required>
+                
+                <button type="submit"><i class="fas fa-plus-circle"></i> Cadastrar Produto</button>
+            </form>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 30px 0;">
+        
+        <section>
+            <h2>Gerenciar Produtos (Editar Preço e Nome)</h2>
+            <table class="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Atual</th>
+                        <th>Novo Nome</th>
+                        <th>Preço Atual (R$)</th>
+                        <th>Novo Preço (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Whey Protein Isolado</td>
+                        <td><input type="text" class="edit-input" value="Whey Protein Isolado"></td>
+                        <td>119.90</td>
+                        <td><input type="number" class="edit-input" step="0.01" value="119.90"></td>
+                        <td>
+                            <button class="action-btn save" title="Salvar Alterações"><i class="fas fa-save"></i></button>
+                            <button class="action-btn delete" title="Excluir Produto"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Creatina Monohidratada</td>
+                        <td><input type="text" class="edit-input" value="Creatina Monohidratada"></td>
+                        <td>59.90</td>
+                        <td><input type="number" class="edit-input" step="0.01" value="59.90"></td>
+                        <td>
+                            <button class="action-btn save" title="Salvar Alterações"><i class="fas fa-save"></i></button>
+                            <button class="action-btn delete" title="Excluir Produto"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>
